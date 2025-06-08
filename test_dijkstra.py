@@ -1,10 +1,8 @@
-"""
-Simple test for Dijkstra algorithm implementation.
-"""
-
 from environment.grid import Grid
 from algorithms.dijkstra import DijkstraPathfinder
 
+
+#main code which is testing dijkstra
 def test_dijkstra():
     print("Testing Dijkstra Algorithm...")
     
