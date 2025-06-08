@@ -6,13 +6,12 @@ from environment.grid import Grid
 from algorithms.dijkstra import DijkstraPathfinder
 
 def test_dijkstra():
-    """Test the Dijkstra implementation."""
     print("Testing Dijkstra Algorithm...")
     
-    # Create small test grid
+    #test along with obstacles
     grid = Grid(5, 5) 
     grid.add_obstacle(0, 4)
-    grid.add_obstacle(4, 0)# Add one obstacle
+    grid.add_obstacle(4, 0)
     grid.add_obstacle(2, 4)
     grid.add_obstacle(3, 4)
     grid.add_obstacle(3, 3)
@@ -20,8 +19,7 @@ def test_dijkstra():
     print("Grid:")
     print(grid)
     print()
-    
-    # Test pathfinding
+ 
     pathfinder = DijkstraPathfinder(grid)
     result = pathfinder.find_path((0, 0), (4, 4))
     
